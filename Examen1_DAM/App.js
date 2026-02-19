@@ -9,7 +9,7 @@ const App = () => {
   const [numberLikes, setNumberLikes] = useState(0);
   const [likeColor, setLikeColor] = useState('#7e7d7d');
   const [saveColor, setSaveColor] = useState('#000000');
-  const [radiusColor, setBorderColor] = useState('#b404ff');
+  const [radiusColor, setBorderColor] = useState('#b300ff');
   const [isOpen, setIsOpen] = useState(false);
   const [historyViews, setHistoryViews] = useState(1);
 
@@ -23,7 +23,7 @@ const App = () => {
   }
 
   const handleBorderColor = () => {
-    if (radiusColor === '#b404ff') {
+    if (radiusColor === '#b300ff') {
       setBorderColor('#494949');
     }
   };
@@ -64,19 +64,18 @@ const App = () => {
       <ScrollView>
       {/* Imagen perfil */}
       <TouchableOpacity onPress={() => {handleBorderColor(); handleHistoryViews(); toggleHistory();}}>
-      <View style={[styles.photoProfileContainer, { borderColor: radiusColor }]}>
-          <Image style={styles.photoProfile} source={require('./assets/images/photoProfile.jpg')} />
+      <View style={styles.photoProfileContainer}>
+          <Image style={[styles.photoProfile, { borderColor: radiusColor }]} source={require('./assets/images/photoProfile.jpg')} />
       </View>
       </TouchableOpacity>
       {isOpen && (
         <View style={styles.hisoryContainer}>
           <Text style={styles.ViewsText}>Historia de Chuchi_Frog</Text>
-          <Image
-            style={styles.historyPhoto}
-            source={require('./assets/images/history.gif')}
-          />
+          <TouchableOpacity onPress={toggleHistory}>
+          <Image style={styles.historyPhoto} source={require('./assets/images/history.gif')} />
+          </TouchableOpacity>
           <Text style={styles.blurText}>I luv u so much</Text>
-          <Text style={styles.ViewsText}>{historyViews} views</Text>
+          <Text style={styles.blurText}>{historyViews} views</Text>
         </View>
       )}
       <Text style={styles.ViewsText}>
@@ -254,15 +253,22 @@ const styles = StyleSheet.create({
     borderWidth: 4,
   },
   hisoryContainer: {
-    width: '100%',
-    alignItems: 'center',
-    marginBottom: 10,
-  },
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0,0,0,0.7)',
+
+  justifyContent: 'center',
+  alignItems: 'center',
+  zIndex: 999,
+},
   historyPhoto: {
-    width: 200,
-    height: 200,
-    borderRadius: 3,
-    marginBottom: 10,
-  },
+  width: 200,
+  height: 200,
+  borderRadius: 10,
+  marginBottom: 10,
+},
 });
 export default App;
