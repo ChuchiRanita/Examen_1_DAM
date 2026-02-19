@@ -1,0 +1,54 @@
+1. ¿Qué es React Native? (5 pts)
+    React native es un framework utilizado en aplicaciones moviles y util al momento de querer que tu app funcione tanto en 
+    android como en IOS, esto es gracias a que utiliza javascript.
+
+2. ¿Qué es una aplicación móvil? (5 pts)
+    Una app es un programa que opera en un dispositivo movil tanto celular como tablet, generalmente brindan herramientas y
+    nos conectan con mas personas como por ejemplo whatsapp o instagram donde nos comunicamos o se comparte contenido.
+
+3. Tipos de aplicaciones móviles (10 pts)
+Explica brevemente:
+Aplicaciones nativas
+    Son apps que estan desarrolladas para un sistema operativo en especifico y el lenguaje en el que se programan es uno
+    pensado para ese mismo lenguaje especifico. 
+Aplicaciones híbridas
+    Combina elementos nativos con web para que se pueda desarrollar una sola aplicacion que funcione en cualquier dispositivo 
+    de la misma manera.
+Aplicaciones web
+    Son aplicaciones que se alojan en servidores web y funcionan sin tener que instalar nada.
+¿Cuál es la diferencia principal entre ellas?
+    las apps nativas generalmente funcionan/tienen menos errores mejor porque estan pensadas 100% para un solo sistema operativo,
+    las hibridas son las mas comunes porque ahorran tiempo y dinero en el desarrollo, ademas de que es mas facil llegar a mas
+    publico con ellas, y las web no se instalan en el dispositivo como si lo hacen las 2 anteriores.
+
+4. Componentes básicos de React Native (10 pts)
+Explica para qué sirve cada uno:
+View
+    funciona como un divisor y ayuda a acomodar los componentes dentro de la app
+Text
+    sirve para poner texto dentro de la aplicacion, simplemente es texto que sin modificadores como un touchableopacity no hace nada
+Image
+    es para agregar imagenes a la aplicacion, funciona con imagenes descargadas dentro del proyecto solo hay que poner la direccion
+    de la misma
+TextInput
+    no lo usamos pero por el nombre me imagino que sirve para ingresar texto pero ya dentro de la app
+
+5. useState (10 pts)
+Responde:
+¿Qué es useState?
+    es un componente en reat que nos permite declarar constantes que cambiaran durante la ejecucion de la app
+¿Para qué sirve?
+    useState sirve para cuando se declara una variable o constante en la aplicacion y debemos de darle un valor o estado inicial
+    ademas de que emperamos que su estado cambie durante la ejecucion
+Escribe un ejemplo sencillo donde se utilice.
+    por ejemplo si queremos que un texto no aparezca al iniciar la app podemos hacer que useState este false y despues a un boton
+    podemos agregarle la funcionalidad de que al clickearlo haga que aparezca el texto cambiando el estado a true
+6. Lógica en aplicaciones móviles (10 pts)
+a) ¿Por qué es importante usar estados en una app?
+    porque nos dan versatilidad en los componentes para poder manejarlos a nuestra conveniencia, ademas pueden ser reutilizados en 
+    varios componentes de la app.
+b) ¿Qué pasaría si una app no tuviera estados dinámicos?
+    no habria cambios en la app ya que como se inicialicen se quedan lo que complicaria lograr los mismos efectos que teniendolos
+c) Menciona un ejemplo real donde usarías estados.
+    lo usaria cuando tuviera un componente que quiero que cambie de color,forma o valor con cierta accion por ejemplo un contador 
+    o cualquier interarccion del usuario que detone algo mas dentro de la app.
